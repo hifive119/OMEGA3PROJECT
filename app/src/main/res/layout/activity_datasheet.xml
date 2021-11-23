@@ -8,6 +8,11 @@
     android:gravity="center"
     tools:context=".DatasheetActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터시트" />
+
     <!-- 구글 데이터시트 연동 -->
 
 </LinearLayout>

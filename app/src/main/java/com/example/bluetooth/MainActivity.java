@@ -13,27 +13,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "Main_Activity";
-
-    private ImageView menuBar;
-    private DrawerLayout drawerLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        menuBar = findViewById(R.id.menuBar);
-        drawerLayout = findViewById(R.id.mainFrame);
         androidx.appcompat.widget.Toolbar toolBar = findViewById(R.id.toolBar);
 
         // 액션 바 변경
         setSupportActionBar(toolBar);
-
-        menuBar.setOnClickListener(v -> {
-            Log.d(TAG, "onClick: 클릭됨");
-            drawerLayout.openDrawer(Gravity.LEFT);
-        });
     }
 
     // 메인 메뉴 바 구성
@@ -48,9 +36,19 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.bluetooth:
-                Intent NewActivity = new Intent(getApplicationContext(), BluetoothActivity.class);
-                startActivity(NewActivity);
+            case R.id.menuBluetooth:
+                Intent NewActivity1 = new Intent(getApplicationContext(), BluetoothActivity.class);
+                startActivity(NewActivity1);
+                break;
+
+            case R.id.menuAlram:
+                Intent NewActivity2 = new Intent(getApplicationContext(), AlarmActivity.class);
+                startActivity(NewActivity2);
+                break;
+
+            case R.id.menuDatasheet:
+                Intent NewActivity3 = new Intent(getApplicationContext(), DatasheetActivity.class);
+                startActivity(NewActivity3);
                 break;
         }
         return true;

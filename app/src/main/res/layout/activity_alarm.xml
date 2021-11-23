@@ -8,6 +8,11 @@
     android:gravity="center"
     tools:context=".AlarmActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람" />
+
     <!-- 알람 오픈소스 -->
 
 </LinearLayout>
