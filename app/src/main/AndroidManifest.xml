@@ -20,6 +20,8 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity android:name=".BluetoothActivity" />
+        <activity android:name=".DatasheetActivity" />
+        <activity android:name=".AlarmActivity" />
 
         <activity
             android:name=".MainActivity"
