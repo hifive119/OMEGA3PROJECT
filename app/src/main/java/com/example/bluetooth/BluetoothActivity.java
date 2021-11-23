@@ -29,16 +29,15 @@ public class BluetoothActivity extends AppCompatActivity {
     class BluetoothRunnable implements Runnable {
         @Override
         public void run() {
-
             mhandler.post(this);
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
+
         bt = new BluetoothSPP(this); // initializing
         textPPM = findViewById(R.id.ppm);
 
@@ -52,7 +51,6 @@ public class BluetoothActivity extends AppCompatActivity {
         bt.setOnDataReceivedListener(new BluetoothSPP.OnDataReceivedListener() { //데이터 수신
             public void onDataReceived(byte[] data, String message) {
                 String temp = message;
-
                 textPPM.setText(message);
             }
         });
